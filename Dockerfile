@@ -3,10 +3,7 @@ FROM debian:11
 RUN apt update -y
 
 # Installation packages de base 
-RUN apt install -y wget curl vim nano dos2unix locales git openjdk-11-jdk
-RUN wget "https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz"
-RUN tar -xzvf apache-maven-3.6.3-bin.tar.gz -C /opt
-RUN rm apache-maven-3.6.3-bin.tar.gz
+RUN apt install -y wget curl vim nano dos2unix locales git openjdk-11-jdk maven
 
 # Installation PostgreSQL
 RUN apt install -y postgresql
